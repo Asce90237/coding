@@ -214,3 +214,29 @@
 
 - 注意上面解决的查询下一周过生日的学生，这里直接加一会出现大问题，所以不能简单的做加一操作就是下一周了。
 
+- datediff 比较两个日期的差距时间 
+
+  ```sql
+  select
+      a.id
+  from
+      Weather a, Weather b
+  where
+      datediff(a.recordDate, b.recordDate) = 1
+  and
+      a.temperature > b.temperature
+  ```
+
+- cross join 将两个表的每一行都连接在一起
+
+  ```sql
+  SELECT 
+      *
+  FROM
+      Students s
+  CROSS JOIN
+      Subjects sub
+  ```
+
+- 
+
